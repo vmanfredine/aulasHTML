@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs do HTML</title>
+</head>
+
+<body>
+    <h1>Inputs do HTML</h1>
+
+    <form>
+        <!-- Campo de texto -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required> <!-- required torna o campo obrigatório -->
+        <br><br>
+
+        <!-- Campo de email-->
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+
+        <!-- Campo de senha -->
+        <label for="password">Senha:</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+
+        <!-- Campo de seleção radio -->
+        <label>Gênero:</label><br>
+        <input type="radio" name="genero" id="masculino" value="m">
+        <!-- para agrupar os mesmos radios, definir o mesmo name -->
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="feminino" value="f">
+        <label for="feminino">Feminino</label>
+        <br><br>
+
+        <!-- Campo de seleção múltipla checkbox -->
+        <label>Interesses:</label>
+        <input type="checkbox" id="backend" name="interesses" value="backend">
+        <label for="backend">Back-end</label>
+        <input type="checkbox" id="frontend" name="interesses" value="frontend">
+        <label for="frontend">Front-end</label>
+        <input type="checkbox" id="mobile" name="interesses" value="mobile">
+        <label for="mobile">Mobile</label>
+        <br><br>
+
+        <!-- Campo de data -->
+        <label for="dataDeNascimento">Data de Nascimento:</label>
+        <input type="date" name="nascimento" id="dataDeNascimento">
+        <br><br>
+
+        <!-- Campo de arquivo -->
+        <label for="fotoDePerfil">Foto de Perfil:</label>
+        <input type="file" name="avatar" id="fotoDePerfil">
+        <br><br>
+
+        <!-- Campo de caixa de seleção -->
+        <label for="situacao">Situação Atual:</label>
+        <select name="situacao" id="situacao">
+            <!-- disabled desativa a opção na lista
+            selected força o elemento a ser selecionado de início -->
+            <option value="" selected disabled>Selecione uma das opções...</option>
+            <option value="estudante">Estudando para me tornar um programador</option>
+            <option value="estagiario">Atuando como estagiário/trainee</option>
+            <option value="junior">Atuando como desenvolvedor júnior</option>
+            <option value="pleno">Atuando como desenvolvedor pleno</option>
+            <option value="senior">Atuando como desenvolvedor sênior</option>
+        </select>
+        <br><br>
+
+        <!-- Campo text area -->
+        <label for="sobre">Sobre mim:</label>
+        <!-- placeholder texto de exemplo dentro do imput -->
+        <textarea name="sobre" id="sobre" cols="40" rows="6" placeholder="Escreva sobre você"></textarea>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
